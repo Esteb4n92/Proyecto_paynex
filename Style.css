@@ -1,0 +1,487 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e2e0e0;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Estilos del logo */
+#logo {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: auto;
+  z-index: 100;
+}
+
+/* Estilos para el encabezado */
+.header {
+  background-color: #f4f4f9;
+  padding: 1rem 0;
+  position: relative;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+/* Configuración del menú hamburguesa */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color: #0073e6;
+}
+
+/* Configuración de navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 20px;
+}
+
+.nav-links li {
+  margin: 0 1rem;
+  padding: 0.5rem 0;
+}
+
+.nav-links li a {
+  font-size: 1rem;
+  cursor: pointer;
+  color: #0073e6;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+  color: #0059b3;
+}
+
+/* Contenedor principal */
+.main-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos para el contenido de texto */
+.text-content {
+  max-width: 50%;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-top: 0;
+  color: #3392da;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #555;
+  margin: 1rem 0;
+  line-height: 1.4;
+}
+
+/* Estilos para el botón CTA */
+.cta-button {
+  background-color: transparent;
+  color: #0073e6;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border: 2px solid #0073e6;
+  border-radius: 5px;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0073e6;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para imágenes */
+.image-content img {
+  max-width: 450px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-content img:hover {
+  transform: scale(1.02);
+}
+
+/* Sección de Companies */
+.section.companies {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.section.companies h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.companies-logos {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.companies-logos img {
+  max-width: 150px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.companies-logos img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.05);
+}
+
+/* Sección de Servicios */
+.services {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f4f4f4;
+}
+
+h4 {
+  font-size: 2.2rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #0073e6;
+  margin-bottom: 2rem;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card h3 {
+  font-size: 1.5rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #0073e6;
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+.service-logo {
+  width: 80px;
+  height: 70px;
+  margin-bottom: 15px;
+  object-fit: contain;
+}
+
+/* Secciones con imagen alternada */
+.custom-solutions,
+.next-big-thing {
+  padding: 5rem 2rem;
+  margin: 0;
+}
+
+.custom-solutions {
+  background-color: #e2e0e0;
+}
+
+.next-big-thing {
+  background-color: #ffffff;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.custom-solutions h2,
+.next-big-thing h2 {
+  font-size: 2.2rem;
+  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+  color: #0073e6;
+  margin-bottom: 20px;
+}
+
+.custom-solutions p,
+.next-big-thing p {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  padding: 4rem 2rem;
+  color: #f4f4f4;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-column h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-column h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background-color: #0073e6;
+}
+
+.footer-column p {
+  font-size: 0.9rem;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #0073e6;
+  text-decoration: underline;
+}
+
+/* Media queries para responsive */
+@media screen and (max-width: 992px) {
+  .main-container,
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .text-content {
+    max-width: 100%;
+    order: 1;
+  }
+  
+  .image-content {
+    order: 2;
+  }
+  
+  .image-content img {
+    max-width: 80%;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  .custom-solutions .container .image-content {
+    order: 2;
+  }
+  
+  .custom-solutions .container .text-content {
+    order: 1;
+  }
+  
+  .next-big-thing .container .image-content {
+    order: 2;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #fff;
+    width: 100%;
+    padding: 0;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+  
+  .nav-links li {
+    text-align: center;
+    margin: 0;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links.show {
+    display: flex;
+  }
+  
+  .service-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card {
+    max-width: 100%;
+  }
+  
+  .companies-logos {
+    gap: 20px;
+  }
+  
+  .companies-logos img {
+    max-width: 100px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2, h4 {
+    font-size: 1.8rem;
+  }
+  
+  .custom-solutions p,
+  .next-big-thing p {
+    font-size: 1rem;
+  }
+  
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .footer-column {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .main-container, 
+  .services,
+  .custom-solutions,
+  .next-big-thing,
+  .section.companies {
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 1.8rem;
+  }
+  
+  h2, h4 {
+    font-size: 1.5rem;
+  }
+  
+  .cta-button {
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    width: 100%;
+  }
+  
+  .companies-logos {
+    flex-direction: column;
+  }
+  
+  .companies-logos img {
+    max-width: 120px;
+    margin: 0 auto;
+  }
+  
+  .image-content img {
+    max-width: 100%;
+  }
+  
+  .footer-column h3 {
+    font-size: 1.1rem;
+  }
+}
+
